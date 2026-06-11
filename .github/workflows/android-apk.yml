@@ -53,6 +53,12 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.10.2"
+          
+      # 修复 AndroidX 校验问题
+      - name: Enable AndroidX in gradle.properties
+        run: |
+          echo "android.useAndroidX=true" >> gradle.properties
+          echo "android.nonTransitiveRClass=true" >> gradle.properties
 
       - name: Build debug APK
         run: gradle :android:app:assembleDebug
