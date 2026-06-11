@@ -1,4 +1,6 @@
 .gocache/
+.gopath/
+.tools/
 .gradle/
 build/
 android/app/build/
