@@ -1,0 +1,19 @@
+README.md
+  s_4a588bfc5f0bb9::t_46e3d0893ee684 1-52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "bda33eb7cb5d1cad0223afa7d2bf8ff347c80854",
+  "prompts": {},
+  "sessions": {
+    "s_4a588bfc5f0bb9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019eb487-4ac1-7480-b2fc-7eb18e49d553",
+        "model": "gpt-5.5"
+      },
+      "human_author": "张俊松 <zhangjunsong@rainbowcn.com>"
+    }
+  }
+}
