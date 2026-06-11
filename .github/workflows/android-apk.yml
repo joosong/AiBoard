@@ -53,6 +53,14 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.10.2"
+
+      - name: Enable AndroidX & Align JVM Target
+        run: |
+          echo "android.useAndroidX=true" >> gradle.properties
+          echo "android.nonTransitiveRClass=true" >> gradle.properties
+          sed -i 's/targetCompatibility JavaVersion.VERSION_1_8/targetCompatibility JavaVersion.VERSION_17/' android/app/build.gradle
+          sed -i 's/sourceCompatibility JavaVersion.VERSION_1_8/sourceCompatibility JavaVersion.VERSION_17/' android/app/build.gradle
+          sed -i 's/jvmTarget = "1.8"/jvmTarget = "17"/' android/app/build.gradle
           
       # 修复 AndroidX 校验问题
       - name: Enable AndroidX in gradle.properties
