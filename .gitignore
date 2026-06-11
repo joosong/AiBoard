@@ -1,0 +1,6 @@
+.gocache/
+.gradle/
+build/
+android/app/build/
+android/app/libs/aiboard.aar
+local.properties
