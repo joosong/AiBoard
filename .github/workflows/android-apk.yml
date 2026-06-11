@@ -43,8 +43,9 @@ jobs:
       - name: Test Go core
         run: go test ./go/aiboard/...
 
+      # 核心修复：增加 -androidapi 21
       - name: Build Go Android AAR
-        run: gomobile bind -target=android -o android/app/libs/aiboard.aar ./go/aiboard/mobile
+        run: gomobile bind -target=android -androidapi 21 -o android/app/libs/aiboard.aar ./go/aiboard/mobile
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
