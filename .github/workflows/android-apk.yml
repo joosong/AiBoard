@@ -45,7 +45,9 @@ jobs:
 
       # 核心修复：增加 -androidapi 21
       - name: Build Go Android AAR
-        run: gomobile bind -target=android -androidapi 21 -o android/app/libs/aiboard.aar ./go/aiboard/mobile
+        run: |
+          mkdir -p android/app/libs
+          gomobile bind -target=android -androidapi 21 -o android/app/libs/aiboard.aar ./go/aiboard/mobile
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
